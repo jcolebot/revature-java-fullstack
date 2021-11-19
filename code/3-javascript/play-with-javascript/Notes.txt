@@ -1,0 +1,51 @@
+
+
+static UI  => data + style 
+dynamic UI => data + style + interactivity
+
+--------------------------------------------------
+
+web UI
+
+static web UI  => HTML + CSS
+dynamic web UI => HTML + CSS + javascript
+
+
+------------------------------------------------------
+
+
+
+why we need .js programs with HTML-page(s) in browser-envi ?
+
+
+using browser provided 'web-apis', 
+.js programs can bring any dynamic-ui activity to web-page 
+
+
+web-apis ==> w3c standards to use web
+
+
+    => DOM ( Document Object Model ), XHR ( XMLHttpRequest ) Timer
+
+
+Javascript + DOM api
+------------------------
+=> page manipulation
+
+    -> create,retreive,update,delete HTML elements
+    -> can change HTML-element's style ( css )
+    -> can change HTML-element's inner content 
+    -> can change HTML-element's attributes/properties
+    -> can validate all form-fields before submit to server-side-programs
+    -> can create rich/user-friendly UI components to HTML-page like calendar,autocomplete,..
+    
+ 
+
+Javascript + Timer Api
+-------------------------
+=> can execute some actions on timeout or timeinterval
+
+
+Javascript + XHR / Fetch
+------------------------
+=> can communicate with server-side programs async style
