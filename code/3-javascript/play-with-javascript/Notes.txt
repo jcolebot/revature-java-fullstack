@@ -15,37 +15,34 @@ dynamic web UI => HTML + CSS + javascript
 
 
 
-why we need .js programs with HTML-page(s) in browser-envi ?
 
 
-using browser provided 'web-apis', 
-.js programs can bring any dynamic-ui activity to web-page 
+How javascript program(s) executes within browser ?
+---------------------------------------------------
 
 
-web-apis ==> w3c standards to use web
+
+  javascript is
+
+    -> single-threaded process
+    -> all IO operations are non-blocking / async
 
 
-    => DOM ( Document Object Model ), XHR ( XMLHttpRequest ) Timer
+browser
+-----------
+
+    e.g chrome
+
+    1. Javascript runtime : based on Ecmascript spec  ( v8 )
+
+        - single-call-stack  : function-execution happen in this memory
+        - heap               : to keep objects
+
+    2. browser APIs  ( DOM, XHR , Timer ,..)  :     based on w3c  spec
+
+    3. Event Queue
+
+    4. Event-Loop
 
 
-Javascript + DOM api
-------------------------
-=> page manipulation
-
-    -> create,retreive,update,delete HTML elements
-    -> can change HTML-element's style ( css )
-    -> can change HTML-element's inner content 
-    -> can change HTML-element's attributes/properties
-    -> can validate all form-fields before submit to server-side-programs
-    -> can create rich/user-friendly UI components to HTML-page like calendar,autocomplete,..
-    
- 
-
-Javascript + Timer Api
--------------------------
-=> can execute some actions on timeout or timeinterval
-
-
-Javascript + XHR / Fetch
-------------------------
-=> can communicate with server-side programs async style
+------------------------------------------------------------------------------
