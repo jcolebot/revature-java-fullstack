@@ -1,0 +1,29 @@
+<div class="alert alert-warning" *ngIf="products.length===0">
+    No Products
+</div>
+
+<table class="table" *ngIf="products.length!==0">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>isAvaiable</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.id}}</td>
+            <td><a [routerLink]="['view',product.id]">{{product.name}}</a></td>
+            <td>{{product.price|currency:'INR'}}</td>
+            <td>{{product.is_available}}</td>
+            <td><a [routerLink]="['/edit',product.id]"><i class="pointer fa fa-edit"></i></a></td>
+            <td><i (click)="handleDelete(product.id)" class="pointer fa fa-trash"></i></td>
+        </tr>
+    </tbody>
+</table>
+<hr />
+
+<router-outlet></router-outlet>
