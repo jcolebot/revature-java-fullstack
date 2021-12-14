@@ -1,0 +1,37 @@
+<div class="container">
+  <hr />
+  <h1>{{title}}</h1>
+  <hr />
+
+  <ul class="nav nav-pills">
+    <ng-container *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/new-todo']">New Todo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/todo-list']">View</a>
+      </li>
+    </ng-container>
+    <ng-container *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/login-form']">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLinkActive="active" [routerLink]="['/register-form']">Register</a>
+      </li>
+    </ng-container>
+    <ng-container *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <a class="nav-link" (click)="handleLogout()" style="cursor: pointer;">Logout</a>
+      </li>
+    </ng-container>
+
+  </ul>
+  <hr />
+  Welcome : {{userName}}
+  <hr />
+
+  <router-outlet></router-outlet>
+
+
+</div>
